@@ -1,52 +1,94 @@
-# My Expense Tracker
+# 💰 Expense Tracker
 
-A simple Flutter app to add, view and delete expenses, with an automatic total.
-Expenses are saved on the device with SharedPreferences.
+A simple and beginner-friendly **Expense Tracker Android application** built using Flutter and Dart. This app helps users record, view, and manage their daily expenses while keeping track of their total spending.
 
-Built with: Flutter, Dart, Material 3, `setState()` (no state-management packages).
+## 📱 Features
 
-## Features
-1. Add expense (title + amount, with validation)
-2. View expenses (ListView.builder, card layout)
-3. Delete expense
-4. Automatic total
-5. Local storage (data survives app restarts)
+- **Add Expenses:** Enter an expense title and amount.
+- **View Expenses:** Display all added expenses in a list.
+- **Delete Expenses:** Remove expenses when they are no longer needed.
+- **Total Calculation:** Automatically calculate the total expenses.
+- **Local Data Storage:** Save expense records using SharedPreferences.
+- **Persistent Data:** Expenses remain available even after closing and reopening the app.
+- **Dark UI:** Clean and minimal dark-themed interface.
 
-## Project structure
+## 🛠️ Technologies Used
+
+- **Flutter** – Cross-platform UI framework.
+- **Dart** – Programming language.
+- **SharedPreferences** – Local key-value storage.
+- **Android Studio** – Android emulator and development environment.
+- **VS Code** – Code editor.
+
+## 📂 Project Structure
+
+```text
+my_expense_tracker/
+│
+├── lib/
+│   ├── main.dart
+│   ├── models/
+│   │   └── expense.dart
+│   ├── screens/
+│   │   └── home_screen.dart
+│   ├── services/
+│   │   └── storage_service.dart
+│   └── widgets/
+│       └── expense_tile.dart
+│
+├── android/
+├── test/
+├── pubspec.yaml
+└── README.md
 ```
-lib/
-  main.dart                      App entry point + dark theme
-  models/expense.dart            Expense class
-  screens/home_screen.dart       The only screen
-  services/storage_service.dart  Save/load with SharedPreferences
-  widgets/expense_tile.dart      One expense card
-```
 
-## Setup (VS Code + Android Emulator)
+## ⚙️ Getting Started
 
 ### Prerequisites
-- Flutter SDK installed (Dart 3.5 or newer) and `flutter doctor` showing no Android errors
-- VS Code with the **Flutter** extension
-- An Android emulator created in Android Studio -> Device Manager
 
-### Steps
-1. Create a fresh Flutter project (this generates the `android/` folder):
-   ```
-   flutter create my_expense_tracker --platforms=android
-   ```
-2. From this ZIP, copy into that new folder, replacing existing files:
-   - the `lib/` folder
-   - `pubspec.yaml`
-   - `analysis_options.yaml`
-3. Delete the default test file: `test/widget_test.dart`
-4. Open the folder in VS Code (File -> Open Folder).
-5. In a terminal inside the project, run:
-   ```
-   flutter pub get
-   flutter analyze
-   ```
-6. Start your emulator (VS Code bottom-right device selector -> pick the emulator).
-7. Press `F5` (or run `flutter run`).
+- Flutter SDK
+- Dart SDK
+- Android Studio or VS Code
+- Android Emulator or Android device
 
-### Test local storage
-Add an expense, fully close the app (swipe it away), and open it again. The expense should still be there.
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/SiddharthaSangani18/my-expense-tracker.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd my_expense_tracker
+```
+
+3. Install dependencies:
+
+```bash
+flutter pub get
+```
+
+4. Run the application:
+
+```bash
+flutter run
+```
+
+## 🧠 What I Learned
+
+Through this project, I practiced:
+
+- Understanding Flutter widgets and application structure.
+- Creating Dart classes and constructors.
+- Managing application state.
+- Displaying dynamic lists using ListView.
+- Handling user input.
+- Working with asynchronous programming using async and await.
+- Converting Dart objects into JSON and back.
+- Storing and retrieving data locally using SharedPreferences.
+
+## 🚀 Future Improvements
+
